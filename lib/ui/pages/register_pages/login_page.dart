@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:xabarchi/ui/pages/register_pages/sign_up_page.dart';
 import 'package:xabarchi/ui/widgets/buttons.dart';
 import 'package:xabarchi/ui/widgets/textfields.dart';
 import 'package:xabarchi/utils/app_padding.dart';
 import 'package:xabarchi/utils/screen_utils.dart';
 
 class LoginPage extends StatefulWidget {
+  static const String id = 'login';
+
   const LoginPage({super.key});
 
   @override
@@ -77,7 +80,12 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        SignUpPage.id,
+                      );
+                    },
                     child: const Text(
                       'Sign Up',
                       style: TextStyle(

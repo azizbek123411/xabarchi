@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xabarchi/ui/pages/login_page.dart';
+import 'package:xabarchi/ui/pages/register_pages/login_page.dart';
+import 'package:xabarchi/ui/pages/register_pages/sign_up_page.dart';
 import 'package:xabarchi/ui/theme/light_mode.dart';
 
 void main() {
@@ -16,6 +17,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
    theme: lightMode,
       home: const LoginPage(),
+      routes: {
+        LoginPage.id:(context)=>const LoginPage(),
+        SignUpPage.id:(context)=>const SignUpPage(),
+      },
     );
   }
 }
